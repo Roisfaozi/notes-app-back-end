@@ -6,6 +6,10 @@ exports.up = pgm => {
       type: 'VARCHAR(50)',
       primaryKey: true,
     },
+    title: {
+      type:'TEXT',
+      notNull: true,
+    },
     body: {
       type:'TEXT',
       notNull: true,
@@ -14,11 +18,11 @@ exports.up = pgm => {
       type:'TEXT[]',
       notNull: true,
     },
-    create_at: {
+    created_at: {
       type:'TEXT',
       notNull: true,
     },
-    update_at: {
+    updated_at: {
       type:'TEXT',
       notNull: true,
     },
