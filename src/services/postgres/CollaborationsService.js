@@ -12,7 +12,7 @@ class CollaborationsService {
 
     const query = {
       text: 'INSERT INTO collaborations VALUES($1, $2, $3) RETURNING id',
-      values: [id, notes, userId],
+      values: [id, noteId, userId],
     };
 
     const result = await this._pool.query(query);
@@ -50,4 +50,4 @@ class CollaborationsService {
   }
 }
 
-module.export = CollaborationsService;
+module.exports = CollaborationsService;
