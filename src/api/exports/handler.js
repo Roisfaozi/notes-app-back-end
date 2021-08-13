@@ -27,10 +27,12 @@ class ExportsHandler {
       return response
     } catch (error) {
       if (error instanceof ClientError) {
-        const response = response({
+        const response = h.response({
           status: 'fail',
+          message: error.message
         })
         response.code(error.statusCode)
+        console.log(error)
         return response
       }
       // Server ERROR!

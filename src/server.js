@@ -109,6 +109,7 @@ const init = async () => {
         service: ProducerService,
         validator: ExportsValidator,
       },
+    }
   ]);
 
   await server.start();
